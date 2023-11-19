@@ -27,40 +27,143 @@ public class Dashboard extends javax.swing.JFrame {
     private void initComponents() {
 
         HomePage = new javax.swing.JTabbedPane();
-        jInternalFrame1 = new javax.swing.JInternalFrame();
-        jInternalFrame2 = new javax.swing.JInternalFrame();
+        Dashboard = new javax.swing.JInternalFrame();
+        Goals = new javax.swing.JInternalFrame();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        Budgeting = new javax.swing.JInternalFrame();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        Scholarships = new javax.swing.JInternalFrame();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea3 = new javax.swing.JTextArea();
+        FinancialTips = new javax.swing.JInternalFrame();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea4 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Full-time Finance");
 
-        jInternalFrame1.setVisible(true);
+        HomePage.setToolTipText("");
 
-        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
-        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
-        jInternalFrame1Layout.setHorizontalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        Dashboard.setVisible(true);
+
+        javax.swing.GroupLayout DashboardLayout = new javax.swing.GroupLayout(Dashboard.getContentPane());
+        Dashboard.getContentPane().setLayout(DashboardLayout);
+        DashboardLayout.setHorizontalGroup(
+            DashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        jInternalFrame1Layout.setVerticalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        HomePage.addTab("tab1", jInternalFrame1);
-
-        jInternalFrame2.setVisible(true);
-
-        javax.swing.GroupLayout jInternalFrame2Layout = new javax.swing.GroupLayout(jInternalFrame2.getContentPane());
-        jInternalFrame2.getContentPane().setLayout(jInternalFrame2Layout);
-        jInternalFrame2Layout.setHorizontalGroup(
-            jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jInternalFrame2Layout.setVerticalGroup(
-            jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        DashboardLayout.setVerticalGroup(
+            DashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        HomePage.addTab("tab2", jInternalFrame2);
+        HomePage.addTab("Dashboard", Dashboard);
+
+        Goals.setVisible(true);
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("Savings goals\n- College tuition costs (projected)\n- projected time left to reach goal");
+        jScrollPane1.setViewportView(jTextArea1);
+
+        javax.swing.GroupLayout GoalsLayout = new javax.swing.GroupLayout(Goals.getContentPane());
+        Goals.getContentPane().setLayout(GoalsLayout);
+        GoalsLayout.setHorizontalGroup(
+            GoalsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GoalsLayout.createSequentialGroup()
+                .addGap(91, 91, 91)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(154, Short.MAX_VALUE))
+        );
+        GoalsLayout.setVerticalGroup(
+            GoalsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GoalsLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(81, Short.MAX_VALUE))
+        );
+
+        HomePage.addTab("Goals", Goals);
+
+        Budgeting.setVisible(true);
+
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        jTextArea2.setText("Money spent (expenses)\nEstimated income (upcoming)\n- based on scheduled work hours\nMoney left to spend");
+        jScrollPane2.setViewportView(jTextArea2);
+
+        javax.swing.GroupLayout BudgetingLayout = new javax.swing.GroupLayout(Budgeting.getContentPane());
+        Budgeting.getContentPane().setLayout(BudgetingLayout);
+        BudgetingLayout.setHorizontalGroup(
+            BudgetingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BudgetingLayout.createSequentialGroup()
+                .addGap(108, 108, 108)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(137, Short.MAX_VALUE))
+        );
+        BudgetingLayout.setVerticalGroup(
+            BudgetingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BudgetingLayout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(85, Short.MAX_VALUE))
+        );
+
+        HomePage.addTab("Budgeting", Budgeting);
+
+        Scholarships.setVisible(true);
+
+        jTextArea3.setColumns(20);
+        jTextArea3.setRows(5);
+        jTextArea3.setText("Find scholarships or grant funding\n- Outsource database with recent scholarships/opportunities\n- Can make fake database if no time\n- Search filters (field of study, location, age, ethnicity, etc.) for eligibility");
+        jScrollPane3.setViewportView(jTextArea3);
+
+        javax.swing.GroupLayout ScholarshipsLayout = new javax.swing.GroupLayout(Scholarships.getContentPane());
+        Scholarships.getContentPane().setLayout(ScholarshipsLayout);
+        ScholarshipsLayout.setHorizontalGroup(
+            ScholarshipsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ScholarshipsLayout.createSequentialGroup()
+                .addContainerGap(145, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(100, 100, 100))
+        );
+        ScholarshipsLayout.setVerticalGroup(
+            ScholarshipsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ScholarshipsLayout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(68, Short.MAX_VALUE))
+        );
+
+        HomePage.addTab("Scholarships", Scholarships);
+
+        FinancialTips.setVisible(true);
+
+        jTextArea4.setColumns(20);
+        jTextArea4.setRows(5);
+        jTextArea4.setText("Get financial literacy tips (filing taxes, finding investments)\n- Video Tutorials\n- Infographics!!\n- In the future, partner w/ experts & educators for accurate, age-appropriate\n");
+        jScrollPane4.setViewportView(jTextArea4);
+
+        javax.swing.GroupLayout FinancialTipsLayout = new javax.swing.GroupLayout(FinancialTips.getContentPane());
+        FinancialTips.getContentPane().setLayout(FinancialTipsLayout);
+        FinancialTipsLayout.setHorizontalGroup(
+            FinancialTipsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FinancialTipsLayout.createSequentialGroup()
+                .addGap(118, 118, 118)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(127, Short.MAX_VALUE))
+        );
+        FinancialTipsLayout.setVerticalGroup(
+            FinancialTipsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FinancialTipsLayout.createSequentialGroup()
+                .addGap(55, 55, 55)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(66, Short.MAX_VALUE))
+        );
+
+        HomePage.addTab("FinancialTips", FinancialTips);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -68,14 +171,14 @@ public class Dashboard extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(HomePage, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
+                .addComponent(HomePage)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(HomePage, javax.swing.GroupLayout.DEFAULT_SIZE, 288, Short.MAX_VALUE)
+                .addComponent(HomePage)
                 .addContainerGap())
         );
 
@@ -118,8 +221,19 @@ public class Dashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JInternalFrame Budgeting;
+    private javax.swing.JInternalFrame Dashboard;
+    private javax.swing.JInternalFrame FinancialTips;
+    private javax.swing.JInternalFrame Goals;
     private javax.swing.JTabbedPane HomePage;
-    private javax.swing.JInternalFrame jInternalFrame1;
-    private javax.swing.JInternalFrame jInternalFrame2;
+    private javax.swing.JInternalFrame Scholarships;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextArea jTextArea3;
+    private javax.swing.JTextArea jTextArea4;
     // End of variables declaration//GEN-END:variables
 }
